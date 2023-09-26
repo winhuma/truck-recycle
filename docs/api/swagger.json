@@ -1,0 +1,778 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "version": "0.0.1",
+    "title": "Swagger Truckstore - OpenAPI 3.0",
+    "description": "This is a sample Truck Store Server based on the OpenAPI 3.0 specification.  You can find out more about\ntermsOfService: http://swagger.io/terms"
+  },
+  "tags": [
+    {
+      "name": "truck profile"
+    },
+    {
+      "name": "truck work"
+    },
+    {
+      "name": "truck promotion"
+    },
+    {
+      "name": "recycle profile"
+    },
+    {
+      "name": "recycle store"
+    },
+    {
+      "name": "recycle promotion"
+    }
+  ],
+  "paths": {
+    "/truck/profile": {
+      "get": {
+        "tags": [
+          "truck profile"
+        ],
+        "description": "Get data profile of truck",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "truck profile"
+        ],
+        "description": "Create data profile of truck",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "truck profile"
+        ],
+        "description": "Update profile of truck",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/work": {
+      "get": {
+        "tags": [
+          "truck work"
+        ],
+        "description": "Show work of truck status active",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "truck work"
+        ],
+        "description": "Create truck work",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/work/{workId}": {
+      "delete": {
+        "tags": [
+          "truck work"
+        ],
+        "description": "Delete truck work",
+        "parameters": [
+          {
+            "name": "workId",
+            "in": "path",
+            "description": "Work ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/work/checkpoint": {
+      "put": {
+        "tags": [
+          "truck work"
+        ],
+        "description": "Delete truck work",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/work/close": {
+      "post": {
+        "tags": [
+          "truck work"
+        ],
+        "description": "Delete truck work",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/promotion/available": {
+      "get": {
+        "tags": [
+          "truck promotion"
+        ],
+        "description": "Show promotion truck status active",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/promotion": {
+      "get": {
+        "tags": [
+          "truck promotion"
+        ],
+        "description": "Show promotion code can use",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "truck promotion"
+        ],
+        "description": "Create truck work with promotion code",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "truck promotion"
+        ],
+        "description": "Update truck promotion",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/truck/promotion/{promotionId}": {
+      "delete": {
+        "tags": [
+          "truck promotion"
+        ],
+        "description": "Delete truck promotion",
+        "parameters": [
+          {
+            "name": "promotionId",
+            "in": "path",
+            "description": "Work ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/profile": {
+      "get": {
+        "tags": [
+          "recycle profile"
+        ],
+        "description": "Get data profile of recycle",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "recycle profile"
+        ],
+        "description": "Create data profile of recycle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "recycle profile"
+        ],
+        "description": "Update profile of recycle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/store": {
+      "get": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Show store of truck status active",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Create truck store",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Delete recycle store",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/store/{storeId}": {
+      "delete": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Delete recycle store",
+        "parameters": [
+          {
+            "name": "storeId",
+            "in": "path",
+            "description": "Work ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/store/hold": {
+      "put": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Delete recycle store",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "recycle store"
+        ],
+        "description": "Delete truck work",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/promotion/available/{promotionCode}": {
+      "get": {
+        "tags": [
+          "recycle promotion"
+        ],
+        "description": "Show promotion recycle status active",
+        "parameters": [
+          {
+            "name": "promotionCode",
+            "in": "path",
+            "description": "Work ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/promotion": {
+      "get": {
+        "tags": [
+          "recycle promotion"
+        ],
+        "description": "Show promotion code can use",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success",
+                  "data": "<object-json>"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "recycle promotion"
+        ],
+        "description": "Create recycle work with promotion code",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "recycle promotion"
+        ],
+        "description": "Update recycle promotion",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "name": "Jessica Smith"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recycle/promotion/{promotionId}": {
+      "delete": {
+        "tags": [
+          "recycle promotion"
+        ],
+        "description": "Delete recycle promotion",
+        "parameters": [
+          {
+            "name": "promotionId",
+            "in": "path",
+            "description": "Work ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

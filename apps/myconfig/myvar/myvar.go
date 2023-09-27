@@ -10,3 +10,7 @@ const (
 	MsgFail           = "Oop. Something wrong please try again later."
 	MsgTypeParamWrong = "type parameter wrong."
 )
+
+const (
+	MsgNotFoundData = "not found data"
+)

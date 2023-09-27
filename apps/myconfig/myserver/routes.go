@@ -31,7 +31,7 @@ func Route(app *fiber.App, db *gorm.DB) {
 	myroute = append(myroute, GetRouteTruck(ht)...)
 	myroute = append(myroute, GetRouteOther(h)...)
 	for _, handle := range myroute {
-		log.Info().Msgf("[%s] %s", handle.RouteMethod, handle.RoutePath)
+		log.Info().Msgf("[API][%s] %s", handle.RouteMethod, handle.RoutePath)
 		app.Add(handle.RouteMethod, handle.RoutePath, handle.RouteFunc)
 	}
 }

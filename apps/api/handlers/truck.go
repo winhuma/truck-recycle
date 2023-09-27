@@ -30,9 +30,12 @@ func (h *hTruck) TruckProfileGet(c *fiber.Ctx) error {
 		return c.Status(400).JSON(myresponse.SetResponse(myvar.MsgTypeParamWrong))
 	}
 
-	data, err := h.st.TruckProfileGet(truckID)
+	data, failMsg, err := h.st.TruckProfileGet(truckID)
 	if err != nil {
 		return err
+	}
+	if len(failMsg) != 0 {
+		return c.Status(400).JSON(myresponse.SetResponse(failMsg))
 	}
 
 	return c.Status(200).JSON(myresponse.SetResponse(myvar.MsgSuccess, data))

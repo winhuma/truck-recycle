@@ -1,5 +1,5 @@
 package services
 
 type ServiceTruck interface {
-	TruckProfileGet(truckID int) (interface{}, error)
+	TruckProfileGet(truckID int) (interface{}, string, error)
 }
